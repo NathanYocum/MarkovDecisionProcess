@@ -23,7 +23,7 @@ class MarkovDecisionProcess(object):
                 for prob_trans, next_state, reward, done in t:
                     self.T[s,a,next_state] += prob_trans
                     if done and reward == 0.0:
-                        reward += -.75
+                        reward = -.75
                     self.R[s,a,next_state] = reward
 
                 #Normalize T

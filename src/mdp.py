@@ -10,8 +10,7 @@ env = gym.make("FrozenLake-v0")
 
 
 class MarkovDecisionProcess(object):
-    def __init__(self, env, gamma = 0.9):
-        self.gamma = gamma
+    def __init__(self, env):
         #This code would be modified to make more generalized
         self.actions_n = env.nA
         self.states_n = env.nS

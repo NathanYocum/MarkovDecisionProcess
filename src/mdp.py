@@ -56,7 +56,6 @@ class MarkovDecisionProcess(object):
         self.value_function = np.zeros(self.R_mean.shape)
         for i in range(k):
             self.value_function = self.R_mean + gamma * np.dot(self.T_mean, self.value_function)
-        #print(gamma * self.value_function[None,None,:])
 
     def policy_iteration(self, max_iter=100, k=100, gamma=1.0):
         for __ in range(max_iter):
